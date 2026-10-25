@@ -11,6 +11,10 @@ English | [中文](README.zh.md)
 
 This optional Web profile bundle adds six selectable themes with matching wallpapers, palettes, and previews. VIP Golden Radiance also adds gold accents, glass surfaces, a licensed display font, and light effects. The bundle and selected theme stay with the profile when DSH is upgraded.
 
+## Interface preview
+
+<p align="center"><img src="assets/dsh-theme-preview.png" alt="DSH Web interface with the VIP Golden Radiance theme"></p>
+
 ## Theme gallery
 
 <table>

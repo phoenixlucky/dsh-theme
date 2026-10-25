@@ -1,7 +1,7 @@
 {
   "name": "@deepseek-ai/dsh-theme",
   "description": "Six selectable wallpaper themes and optional VIP interface styling for Web profiles",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publishConfig": {
     "access": "public"
   },
@@ -37,6 +37,7 @@
     "lib/index.js",
     "lib/client.js",
     "lib/assets",
+    "public/assets",
     "lib/types/**/*.d.ts"
   ],
   "license": "MIT",

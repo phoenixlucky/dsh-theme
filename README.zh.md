@@ -11,6 +11,10 @@ kind: "package-bundle"
 
 这是面向 Web 配置档案的可选插件，提供六款主题及对应的壁纸、配色和预览。VIP 金耀还包含金色界面强调、玻璃表面、授权显示字体和光影效果。插件及主题选择保存在配置档案中，DSH 升级后仍会保留。
 
+## 页面预览
+
+<p align="center"><img src="assets/dsh-theme-preview.png" alt="使用 VIP 金耀主题的 DSH Web 界面"></p>
+
 ## 主题预览
 
 <table>
