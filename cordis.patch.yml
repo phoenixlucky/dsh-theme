@@ -1,0 +1,5 @@
+# VIP appearance is an optional profile feature. The plugin manager installs
+# this row from the profile bundle patch and can unload it without app changes.
+- insert:
+    - id: vip-appearance
+      name: '@deepseek-ai/dsh-vip-appearance'

@@ -1,0 +1,9 @@
+Font asset: GuruQiuWan (犬仓丘丸), regular.
+
+Copyright © 2026 Gurufont.@Josam_Yau. All rights reserved.
+The upstream font is distributed under Apache License 2.0. A copy is included in LICENSE-2.0.txt.
+Source: https://www.100font.com/thread-1867.htm
+
+The supplied full TTF was mechanically converted to WOFF2 with fontTools. No glyphs were subset or edited.
+Source TTF SHA-256: 3A3CC71B8C6FA7B1CCDFEE636B08D117262E7303864154EAED4777745F350822
+Bundled WOFF2 SHA-256: 6482364A7D6EE932FB49D01EAE976EFA833985DB57210A8FCB0EF52E2DE82CA7
