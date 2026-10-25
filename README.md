@@ -3,7 +3,7 @@ description: "Optional VIP Dream theme and interface styling for Web profiles."
 kind: "package-bundle"
 ---
 
-# @deepseek-ai/dsh-vip-appearance
+# @deepseek-ai/dsh-theme
 
 English | [中文](README.zh.md)
 

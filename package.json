@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-vip-appearance",
+  "name": "@deepseek-ai/dsh-theme",
   "description": "Six selectable wallpaper themes and optional VIP interface styling for Web profiles",
   "version": "1.0.1",
   "publishConfig": {

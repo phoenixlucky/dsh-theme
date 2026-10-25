@@ -3,7 +3,7 @@ description: "面向 Web 配置档案的可选 VIP 梦幻主题与界面效果�
 kind: "package-bundle"
 ---
 
-# @deepseek-ai/dsh-vip-appearance
+# @deepseek-ai/dsh-theme
 
 [English](README.md) | 中文
 
