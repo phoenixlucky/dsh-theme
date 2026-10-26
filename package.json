@@ -1,7 +1,7 @@
 {
   "name": "@deepseek-ai/dsh-theme",
   "description": "Six selectable wallpaper themes and optional VIP interface styling for Web profiles",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publishConfig": {
     "access": "public"
   },
@@ -10,6 +10,9 @@
     "url": "git+https://github.com/phoenixlucky/dsh-theme.git"
   },
   "type": "module",
+  "scripts": {
+    "sync:client-styles": "node scripts/sync-client-styles.mjs"
+  },
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
   "exports": {
@@ -21,7 +24,6 @@
       "types": "./lib/types/client/index.d.ts",
       "default": "./lib/client.js"
     },
-    "./src/*": "./src/*",
     "./package.json": "./package.json",
     "./cordis.patch.yml": "./cordis.patch.yml",
     "./icon": "./icon.svg",
@@ -29,7 +31,9 @@
     "./locale/*.json": "./locale/*.json"
   },
   "files": [
-    "assets",
+    "assets/*.webp",
+    "assets/font-license.txt",
+    "assets/LICENSE-2.0.txt",
     "icon.svg",
     "locale/*.json",
     "docs",
@@ -38,7 +42,9 @@
     "lib/client.js",
     "lib/assets",
     "public/assets",
-    "lib/types/**/*.d.ts"
+    "lib/types/**/*.d.ts",
+    "src/client/styles.css",
+    "scripts/sync-client-styles.mjs"
   ],
   "license": "MIT",
   "engines": {
