@@ -38,11 +38,11 @@ kind: "package-bundle"
 - **从 Git 仓库安装：** 运行 `dsh plugin --profile desktop add git+https://github.com/phoenixlucky/dsh-theme.git#main`。
 - **本地安装：** 运行 `dsh plugin --profile web add E:\home\dsh-theme`。
 
-当前包名为 `@deepseek-ai/dsh-theme`，主题插件自身版本为 `1.0.5`。`0.2.1-rc.3` 是兼容的 DSH 版本和 `dsh-client-ui-theme` 依赖版本，不是本插件的安装版本。请通过 `dsh plugin` 安装，让 Harness 同时记录依赖和 profile 中的 bundle 选择。Registry 返回 `404` 表示请求的包名或版本在该源不可用；切换镜像不会发布这个包。
+当前包名为 `@deepseek-ai/dsh-theme`，主题插件自身版本为 `1.0.6`。`0.2.1-rc.3` 是兼容的 DSH 版本和 `dsh-client-ui-theme` 依赖版本，不是本插件的安装版本。请通过 `dsh plugin` 安装，让 Harness 同时记录依赖和 profile 中的 bundle 选择。Registry 返回 `404` 表示请求的包名或版本在该源不可用；切换镜像不会发布这个包。
 
-在「主题与壁纸」页面选择卡片后，主题 id 会保存到 `ui-theme`，重启后仍会保留。新配置档案使用默认系统配色时，启用插件会默认选择 VIP 金耀。停用插件会移除六张主题卡和资源，内置的浅色、深色及系统配色仍可使用；旧设置中的 `official-vip-dream` 会迁移为 VIP 金耀。
+启用后，在 **设置 → 通用 → 主题与壁纸** 中浏览六款主题。点卡片先查看大图预览，再点「应用主题」切换；选择由 DSH 保存到 `ui-theme`，重启后仍会保留。新配置档案使用默认系统配色时，启用插件会默认选择 VIP 金耀。停用插件会移除主题选择界面、六款主题和相关资源，内置的浅色、深色及系统配色仍可使用；旧设置中的 `official-vip-dream` 会迁移为 VIP 金耀。
 
-浏览器插件通过 `ctx.theme` 注册六款主题，并通过可卸载的 effect 安装 VIP 样式。壁纸和授权字体均包含在插件包中，无需联网下载，也不依赖应用安装目录中的文件。
+浏览器插件通过 `ctx.theme` 注册六款主题，并在 DSH 通用设置扩展点提供壁纸图库；图库复用 DSH 的主题服务保存选择。VIP 样式通过可卸载的 effect 安装。壁纸和授权字体均包含在插件包中，无需联网下载，也不依赖应用安装目录中的文件。
 
 ## 支持版本
 
