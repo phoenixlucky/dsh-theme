@@ -9,7 +9,7 @@ English | [中文](README.zh.md)
 
 ## Summary
 
-This optional Web profile bundle adds six selectable themes with matching wallpapers, palettes, and previews. VIP Golden Radiance also adds gold accents, glass surfaces, a licensed display font, and light effects. The bundle and selected theme stay with the profile when DSH is upgraded.
+WJ Dreamlight is an optional Web profile bundle with six selectable themes, matching wallpapers, palettes, and previews. VIP Golden Radiance adds gold accents, glass surfaces, a licensed display font, and light effects. The bundle and selected theme stay with the profile when DSH is upgraded.
 
 ## Interface preview
 
@@ -34,11 +34,11 @@ This optional Web profile bundle adds six selectable themes with matching wallpa
 
 Choose one installation method for the Web profile:
 
-- **Official:** Open **Settings → Plugins → More → Official**, find **VIP Golden Radiance**, then install and enable it.
+- **Official:** Open **Settings → Plugins → More → Official**, find **WJ Dreamlight**, then install and enable it.
 - **From this Git repository:** Run `dsh plugin --profile desktop add git+https://github.com/phoenixlucky/dsh-theme.git#main`.
 - **Local copy:** Run `dsh plugin --profile web add E:\home\dsh-theme`.
 
-The current package id is `@deepseek-ai/dsh-theme` and its bundle version is `1.0.6`. `0.2.1-rc.3` is the compatible DSH release and `dsh-client-ui-theme` dependency version, not this bundle's install version. Install through `dsh plugin` so Harness records the bundle in the profile. A registry `404` means the requested name/version is not available from that registry; changing mirrors does not publish it.
+The current package id is `@deepseek-ai/dsh-theme` and its bundle version is `1.0.7`. `0.2.1-rc.3` is the compatible DSH release and `dsh-client-ui-theme` dependency version, not this bundle's install version. Install through `dsh plugin` so Harness records the bundle in the profile. A registry `404` means the requested name/version is not available from that registry; changing mirrors does not publish it.
 
 Open **Settings → General → Themes and wallpaper** to browse the six themes. Select a card to preview its wallpaper, then choose **Apply theme** to switch; DSH saves the selection in `ui-theme` across restarts. A fresh profile using the default system palette selects VIP Golden Radiance when the bundle is enabled. Disabling the bundle removes the gallery, its six themes, and their assets, while the built-in light, dark, and system palettes remain available. Existing `official-vip-dream` preferences migrate to VIP Golden Radiance.
 

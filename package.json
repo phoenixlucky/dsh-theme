@@ -1,7 +1,7 @@
 {
   "name": "@deepseek-ai/dsh-theme",
   "description": "Six selectable wallpaper themes and optional VIP interface styling for Web profiles",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "publishConfig": {
     "access": "public"
   },
@@ -26,7 +26,7 @@
     },
     "./package.json": "./package.json",
     "./cordis.patch.yml": "./cordis.patch.yml",
-    "./icon": "./icon.svg",
+    "./icon": "./public/assets/icons/wj-dreamlight.png",
     "./assets/*": "./lib/assets/*",
     "./locale/*.json": "./locale/*.json"
   },
@@ -34,7 +34,6 @@
     "assets/*.webp",
     "assets/font-license.txt",
     "assets/LICENSE-2.0.txt",
-    "icon.svg",
     "locale/*.json",
     "docs",
     "cordis.patch.yml",

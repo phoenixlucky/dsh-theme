@@ -9,7 +9,7 @@ kind: "package-bundle"
 
 ## 概述
 
-这是面向 Web 配置档案的可选插件，提供六款主题及对应的壁纸、配色和预览。VIP 金耀还包含金色界面强调、玻璃表面、授权显示字体和光影效果。插件及主题选择保存在配置档案中，DSH 升级后仍会保留。
+**WJ 星耀主题**是面向 Web 配置档案的可选插件，提供六款主题及对应的壁纸、配色和预览。VIP 金耀还包含金色界面强调、玻璃表面、授权显示字体和光影效果。插件及主题选择保存在配置档案中，DSH 升级后仍会保留。
 
 ## 页面预览
 
@@ -34,11 +34,11 @@ kind: "package-bundle"
 
 为 Web 配置档案选择一种安装方式：
 
-- **官方安装：** 打开 **设置 → 插件 → 更多 → 官方**，找到 **VIP 金耀**，然后安装并启用。
+- **官方安装：** 打开 **设置 → 插件 → 更多 → 官方**，找到 **WJ 星耀主题**，然后安装并启用。
 - **从 Git 仓库安装：** 运行 `dsh plugin --profile desktop add git+https://github.com/phoenixlucky/dsh-theme.git#main`。
 - **本地安装：** 运行 `dsh plugin --profile web add E:\home\dsh-theme`。
 
-当前包名为 `@deepseek-ai/dsh-theme`，主题插件自身版本为 `1.0.6`。`0.2.1-rc.3` 是兼容的 DSH 版本和 `dsh-client-ui-theme` 依赖版本，不是本插件的安装版本。请通过 `dsh plugin` 安装，让 Harness 同时记录依赖和 profile 中的 bundle 选择。Registry 返回 `404` 表示请求的包名或版本在该源不可用；切换镜像不会发布这个包。
+当前包名为 `@deepseek-ai/dsh-theme`，主题插件自身版本为 `1.0.7`。`0.2.1-rc.3` 是兼容的 DSH 版本和 `dsh-client-ui-theme` 依赖版本，不是本插件的安装版本。请通过 `dsh plugin` 安装，让 Harness 同时记录依赖和 profile 中的 bundle 选择。Registry 返回 `404` 表示请求的包名或版本在该源不可用；切换镜像不会发布这个包。
 
 启用后，在 **设置 → 通用 → 主题与壁纸** 中浏览六款主题。点卡片先查看大图预览，再点「应用主题」切换；选择由 DSH 保存到 `ui-theme`，重启后仍会保留。新配置档案使用默认系统配色时，启用插件会默认选择 VIP 金耀。停用插件会移除主题选择界面、六款主题和相关资源，内置的浅色、深色及系统配色仍可使用；旧设置中的 `official-vip-dream` 会迁移为 VIP 金耀。
 
