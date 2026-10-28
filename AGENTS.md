@@ -21,6 +21,12 @@ These rules apply to all future interface work in this plugin repository.
 - Keep styles and resources scoped to the theme id, preserve reduced-motion behavior, and use responsive limits for widths and decorations.
 - Update relevant documentation when a visual variable or asset workflow changes. Keep this file as the default guidance for future UI and visual work.
 
+## Interface effects
+
+- Define reusable visual effect values as namespaced `--dsh-theme-effect-*` CSS variables at the component or active theme root. Keep motion duration and easing, hover lift and shadow, backdrop blur, glow, and gradient animation as separate tokens.
+- Reuse the tokens across related states and components so hover, focus, selected, and modal feedback remain consistent. Keep decorative emphasis distinct from interaction feedback.
+- Preserve clear `:focus-visible` feedback and disable or reduce decorative motion and transitions under `prefers-reduced-motion`.
+
 ## DeepSeek Harness plugin packaging and installation
 
 Apply these rules to every plugin bundle in this repository and use them as the baseline when adding another Harness plugin.
@@ -45,4 +51,4 @@ Apply these rules to every plugin bundle in this repository and use them as the 
 
 - For local development, add the absolute package directory (or its `file:` spec) with the same `dsh plugin` command. Do not use bare `pnpm add` in a profile as the documented installation flow; it only changes package dependencies and bypasses Harness bundle management.
 - If the registry reports 404, first verify the exact package name, version, and registry. Switching mirrors cannot make an unpublished or renamed package appear. For an unpublished package, use a supported Git repository spec or local package path; publish and verify a registry release before documenting an npm install command.
-- Keep install examples synchronized with the current manifest and README. Never copy a dependency's version into the bundle install command: for example, `dsh-client-ui-theme@0.2.1-rc.3` is a dependency version, while this bundle's version is `1.0.8`.
+- Keep install examples synchronized with the current manifest and README. Never copy a dependency's version into the bundle install command: for example, `dsh-client-ui-theme@0.2.1-rc.3` is a dependency version, while this bundle's version is `1.0.9`.

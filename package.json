@@ -1,7 +1,23 @@
 {
   "name": "@deepseek-ai/dsh-theme",
   "description": "Six selectable wallpaper themes and optional VIP interface styling for Web profiles",
-  "version": "1.0.8",
+  "version": "1.0.9",
+  "author": {
+    "name": "phoenixlucky",
+    "url": "https://github.com/phoenixlucky"
+  },
+  "homepage": "https://github.com/phoenixlucky/dsh-theme#readme",
+  "bugs": {
+    "url": "https://github.com/phoenixlucky/dsh-theme/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "plugin",
+    "ui-theme",
+    "wallpaper"
+  ],
   "publishConfig": {
     "access": "public"
   },

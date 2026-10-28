@@ -38,7 +38,7 @@ Choose one installation method for the Web profile:
 - **From this Git repository:** Run `dsh plugin --profile desktop add git+https://github.com/phoenixlucky/dsh-theme.git#main`.
 - **Local copy:** Run `dsh plugin --profile web add E:\home\dsh-theme`.
 
-The current package id is `@deepseek-ai/dsh-theme` and its bundle version is `1.0.8`. `0.2.1-rc.3` is the compatible DSH release and `dsh-client-ui-theme` dependency version, not this bundle's install version. Install through `dsh plugin` so Harness records the bundle in the profile. A registry `404` means the requested name/version is not available from that registry; changing mirrors does not publish it.
+The current package id is `@deepseek-ai/dsh-theme` and its bundle version is `1.0.9`. `0.2.1-rc.3` is the compatible DSH release and `dsh-client-ui-theme` dependency version, not this bundle's install version. Install through `dsh plugin` so Harness records the bundle in the profile. A registry `404` means the requested name/version is not available from that registry; changing mirrors does not publish it.
 
 Open **Settings → General → Themes and wallpaper** to browse the six themes. Select a card to preview its wallpaper, then choose **Apply theme** to switch; DSH saves the selection in `ui-theme` across restarts. Enabling the bundle preserves the current theme preference, including `system`; choose VIP Golden Radiance from the gallery to apply it. Disabling the bundle removes the gallery, its six themes, and their assets, while the built-in light, dark, and system palettes remain available. Existing `official-vip-dream` preferences migrate to VIP Golden Radiance.
 
