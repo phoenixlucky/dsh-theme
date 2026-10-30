@@ -141,8 +141,20 @@
   .dsh-theme-gallery-card {transition:none}
   .dsh-theme-gallery-card:hover {transform:none}
 }
+body[data-dsh-theme=dsh-theme],
+body[data-dsh-theme=official-sea-salt],
+body[data-dsh-theme=official-bamboo-green],
+body[data-dsh-theme=official-coral-pink],
+body[data-dsh-theme=official-lavender],
+body[data-dsh-theme=official-midnight-indigo] {
+  background-image:var(--dsh-theme-wallpaper);
+  background-position:center;
+  background-size:cover;
+  background-attachment:fixed
+}
 body[data-dsh-theme=dsh-theme] {
   color-scheme:light;
+  --dsh-font-family-text:DshVipDream;
   --dsh-appearance-hero-width:fit-content;
   --dsh-appearance-hero-title-size:42px;
   --dsh-appearance-hero-title-offset-y:-31px;
