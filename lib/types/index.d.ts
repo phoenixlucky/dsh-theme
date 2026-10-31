@@ -1,8 +1,8 @@
 import type { Volatile } from '@deepseek-ai/cordis';
 import z from '@deepseek-ai/schemastery';
-/** The selected registered wallpaper theme, persisted with this profile entry. */
+/** The selected theme, persisted with this profile entry. */
 export interface Config {
-    preference: Volatile<'system' | 'dsh-theme' | 'official-sea-salt' | 'official-bamboo-green' | 'official-coral-pink' | 'official-lavender' | 'official-midnight-indigo'>;
+    preference: Volatile<'light' | 'dark' | 'system' | 'dsh-theme' | 'official-sea-salt' | 'official-bamboo-green' | 'official-coral-pink' | 'official-lavender' | 'official-midnight-indigo'>;
     sidebarTransparency: Volatile<number>;
     conversationTransparency: Volatile<number>;
 }
