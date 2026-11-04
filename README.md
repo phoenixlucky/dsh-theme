@@ -3,7 +3,7 @@ description: "Optional VIP Dream theme and interface styling for Web profiles."
 kind: "package-bundle"
 ---
 
-# @deepseek-ai/dsh-theme
+# @tinyforge/dsh-theme
 
 English | [中文](README.zh.md)
 
@@ -35,10 +35,11 @@ WJ Dreamlight is an optional Web profile bundle with six selectable themes, matc
 Choose one installation method for the Web profile:
 
 - **Official:** Open **Settings → Plugins → More → Official**, find **WJ Dreamlight**, then install and enable it.
+- **npm registry:** Run `dsh plugin --profile desktop add @tinyforge/dsh-theme@1.0.21`.
 - **From this Git repository:** Run `dsh plugin --profile desktop add git+https://github.com/phoenixlucky/dsh-theme.git#main`.
 - **Local copy:** Run `dsh plugin --profile web add E:\home\dsh-theme`.
 
-The current package id is `@deepseek-ai/dsh-theme` and its bundle version is `1.0.21`. The bundle supports DSH `0.2.1-rc.3`, `0.2.2-alpha.2`, and later stable `0.2.x` releases. Its `dsh-client-ui-theme` dependency accepts the matching compatible releases; that dependency version is not this bundle's install version. Install through `dsh plugin` so Harness records the bundle in the profile. A registry `404` means the requested name/version is not available from that registry; changing mirrors does not publish it.
+The current package id is `@tinyforge/dsh-theme` and its bundle version is `1.0.21`. The bundle supports DSH `0.2.1-rc.3`, `0.2.2-alpha.2`, and later stable `0.2.x` releases. Its `dsh-client-ui-theme` dependency accepts the matching compatible releases; that dependency version is not this bundle's install version. Install through `dsh plugin` so Harness records the bundle in the profile.
 
 Open **Settings → General → Themes and wallpaper** to browse the six themes and adjust separate 0–100% background-transparency sliders for the sidebar and conversation area. Select a card to preview its wallpaper, then choose **Apply theme** to switch; the theme and transparency values are saved in the `dsh-theme` plugin configuration for the current profile and restored after restart on clients that load this Web plugin. At 0%, the original theme surfaces are preserved. Wallpaper visibility at higher values still depends on whether the host canvas is transparent. The gallery also follows the host theme settings for light, dark, and system, and saves whichever of the three you pick, so a restart keeps that palette instead of falling back to the system setting. Enabling the bundle preserves the current theme preference, including `system`; choose VIP Golden Radiance from the gallery to apply it. Disabling the bundle removes the gallery, its six themes, and their assets, while the built-in light, dark, and system palettes remain available. Existing `official-vip-dream` preferences migrate to VIP Golden Radiance.
 

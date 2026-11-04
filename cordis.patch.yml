@@ -2,4 +2,4 @@
 # this row from the profile bundle patch and can unload it without app changes.
 - insert:
     - id: dsh-theme
-      name: '@deepseek-ai/dsh-theme'
+      name: '@tinyforge/dsh-theme'
