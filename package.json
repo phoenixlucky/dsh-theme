@@ -1,7 +1,7 @@
 {
   "name": "@tinyforge/dsh-theme",
-  "description": "Eight selectable wallpaper themes and optional VIP interface styling for Web profiles",
-  "version": "1.0.22",
+  "description": "Five Chinese festival wallpaper themes plus VIP, Halloween, and Christmas wallpapers with reusable theme effects.",
+  "version": "1.1.0",
   "author": {
     "name": "phoenixlucky",
     "url": "https://github.com/phoenixlucky"
@@ -16,7 +16,10 @@
     "dsh-plugin",
     "plugin",
     "ui-theme",
-    "wallpaper"
+    "wallpaper",
+    "seasonal",
+    "holiday",
+    "chinese-festivals"
   ],
   "publishConfig": {
     "access": "public"
@@ -51,7 +54,8 @@
     "assets/font-license.txt",
     "assets/LICENSE-2.0.txt",
     "locale/*.json",
-    "docs",
+    "docs/DETAIL.md",
+    "docs/DETAIL.zh.md",
     "cordis.patch.yml",
     "lib/index.js",
     "lib/client.js",
