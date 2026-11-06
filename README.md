@@ -11,9 +11,13 @@ English | [中文](README.zh.md)
 
 WJ Dreamlight is an optional Web profile bundle with eight selectable themes, matching wallpapers, palettes, and previews — plus a generic theme interface so more themes, including ones you define yourself, reuse the same effect layer. VIP Golden Radiance adds gold accents, glass surfaces, a licensed display font, and light effects. The bundle and selected theme stay with the profile when DSH is upgraded.
 
-## Interface preview
+## Interface previews
 
 <p align="center"><img src="assets/dsh-theme-preview.webp" alt="DSH Web interface showing the VIP Golden Radiance wallpaper"></p>
+
+### Wallpaper gallery
+
+<p align="center"><img src="assets/dsh-theme-gallery-preview.webp" alt="DSH theme and wallpaper gallery showing the holiday themes"></p>
 
 ## Theme gallery
 

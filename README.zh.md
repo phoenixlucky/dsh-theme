@@ -15,6 +15,10 @@ kind: "package-bundle"
 
 <p align="center"><img src="assets/dsh-theme-preview.webp" alt="使用 VIP 金耀壁纸的 DSH Web 界面截图"></p>
 
+### 主题图库
+
+<p align="center"><img src="assets/dsh-theme-gallery-preview.webp" alt="显示节日主题壁纸的 DSH 主题图库"></p>
+
 ## 主题预览
 
 <table>
