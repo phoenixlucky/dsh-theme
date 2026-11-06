@@ -176,7 +176,9 @@ body[data-dsh-theme=official-sea-salt],
 body[data-dsh-theme=official-bamboo-green],
 body[data-dsh-theme=official-coral-pink],
 body[data-dsh-theme=official-lavender],
-body[data-dsh-theme=official-midnight-indigo] {
+body[data-dsh-theme=official-midnight-indigo],
+body[data-dsh-theme=official-halloween],
+body[data-dsh-theme=official-christmas] {
   background-image:var(--dsh-theme-wallpaper);
   background-position:center;
   background-size:cover;

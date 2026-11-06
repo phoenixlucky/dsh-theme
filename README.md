@@ -9,7 +9,7 @@ English | [中文](README.zh.md)
 
 ## Summary
 
-WJ Dreamlight is an optional Web profile bundle with six selectable themes, matching wallpapers, palettes, and previews. VIP Golden Radiance adds gold accents, glass surfaces, a licensed display font, and light effects. The bundle and selected theme stay with the profile when DSH is upgraded.
+WJ Dreamlight is an optional Web profile bundle with eight selectable themes, matching wallpapers, palettes, and previews. VIP Golden Radiance adds gold accents, glass surfaces, a licensed display font, and light effects. The bundle and selected theme stay with the profile when DSH is upgraded.
 
 ## Interface preview
 
@@ -28,6 +28,10 @@ WJ Dreamlight is an optional Web profile bundle with six selectable themes, matc
     <td align="center"><img src="assets/lavender.wallpaper.webp" alt="Lavender wallpaper" width="240"><br><strong>Lavender</strong></td>
     <td align="center"><img src="assets/midnight-indigo.wallpaper.webp" alt="Midnight Indigo wallpaper" width="240"><br><strong>Midnight Indigo</strong></td>
   </tr>
+  <tr>
+    <td align="center"><img src="assets/halloween.wallpaper.webp" alt="Halloween Night wallpaper" width="240"><br><strong>Halloween Night</strong></td>
+    <td align="center"><img src="assets/christmas.wallpaper.webp" alt="Christmas Snowglow wallpaper" width="240"><br><strong>Christmas Snowglow</strong></td>
+  </tr>
 </table>
 
 ## Use this package
@@ -35,15 +39,15 @@ WJ Dreamlight is an optional Web profile bundle with six selectable themes, matc
 Choose one installation method for the Web profile:
 
 - **Official:** Open **Settings → Plugins → More → Official**, find **WJ Dreamlight**, then install and enable it.
-- **npm registry:** Run `dsh plugin --profile desktop add @tinyforge/dsh-theme@1.0.21`.
+- **npm registry:** Run `dsh plugin --profile desktop add @tinyforge/dsh-theme@1.0.22`.
 - **From this Git repository:** Run `dsh plugin --profile desktop add git+https://github.com/phoenixlucky/dsh-theme.git#main`.
 - **Local copy:** Run `dsh plugin --profile web add E:\home\dsh-theme`.
 
-The current package id is `@tinyforge/dsh-theme` and its bundle version is `1.0.21`. The bundle supports DSH `0.2.1-rc.3`, `0.2.2-alpha.2`, and later stable `0.2.x` releases. Its `dsh-client-ui-theme` dependency accepts the matching compatible releases; that dependency version is not this bundle's install version. Install through `dsh plugin` so Harness records the bundle in the profile.
+The current package id is `@tinyforge/dsh-theme` and its bundle version is `1.0.22`. The bundle supports DSH `0.2.1-rc.3`, `0.2.2-alpha.2`, and later stable `0.2.x` releases. Its `dsh-client-ui-theme` dependency accepts the matching compatible releases; that dependency version is not this bundle's install version. Install through `dsh plugin` so Harness records the bundle in the profile.
 
-Open **Settings → General → Themes and wallpaper** to browse the six themes and adjust separate 0–100% background-transparency sliders for the sidebar and conversation area. Select a card to preview its wallpaper, then choose **Apply theme** to switch; the theme and transparency values are saved in the `dsh-theme` plugin configuration for the current profile and restored after restart on clients that load this Web plugin. At 0%, the original theme surfaces are preserved. Wallpaper visibility at higher values still depends on whether the host canvas is transparent. The gallery also follows the host theme settings for light, dark, and system, and saves whichever of the three you pick, so a restart keeps that palette instead of falling back to the system setting. Enabling the bundle preserves the current theme preference, including `system`; choose VIP Golden Radiance from the gallery to apply it. Disabling the bundle removes the gallery, its six themes, and their assets, while the built-in light, dark, and system palettes remain available. Existing `official-vip-dream` preferences migrate to VIP Golden Radiance.
+Open **Settings → General → Themes and wallpaper** to browse the eight themes and adjust separate 0–100% background-transparency sliders for the sidebar and conversation area. Select a card to preview its wallpaper, then choose **Apply theme** to switch; the theme and transparency values are saved in the `dsh-theme` plugin configuration for the current profile and restored after restart on clients that load this Web plugin. At 0%, the original theme surfaces are preserved. Wallpaper visibility at higher values still depends on whether the host canvas is transparent. The gallery also follows the host theme settings for light, dark, and system, and saves whichever of the three you pick, so a restart keeps that palette instead of falling back to the system setting. Enabling the bundle preserves the current theme preference, including `system`; choose VIP Golden Radiance from the gallery to apply it. Disabling the bundle removes the gallery, its eight themes, and their assets, while the built-in light, dark, and system palettes remain available. Existing `official-vip-dream` preferences migrate to VIP Golden Radiance.
 
-The browser plugin registers the six themes through `ctx.theme` and adds a wallpaper gallery and surface-transparency controls to DSH's General settings slot. The gallery uses Harness configuration forms to save and restore theme and opacity settings in the profile. VIP styling is applied through a disposable stylesheet effect. Wallpaper images and the licensed display font ship with the bundle, so they need no network request or files from the application installation directory.
+The browser plugin registers the eight themes through `ctx.theme` and adds a wallpaper gallery and surface-transparency controls to DSH's General settings slot. The gallery uses Harness configuration forms to save and restore theme and opacity settings in the profile. VIP styling is applied through a disposable stylesheet effect. Wallpaper images and the licensed display font ship with the bundle, so they need no network request or files from the application installation directory.
 
 ## Supported versions
 
