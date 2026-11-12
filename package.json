@@ -1,7 +1,7 @@
 {
   "name": "@tinyforge/dsh-theme",
-  "description": "Five Chinese festival wallpaper themes plus VIP, Halloween, and Christmas wallpapers with reusable theme effects.",
-  "version": "1.1.0",
+  "description": "Festival wallpapers, theme effects, transparency controls, and custom themes for DSH Web and desktop; requires DSH >=0.2.1-rc.3 <0.3.0 or 0.2.2-alpha.2. Custom remote wallpapers connect to their image host.",
+  "version": "1.1.1",
   "author": {
     "name": "phoenixlucky",
     "url": "https://github.com/phoenixlucky"
@@ -45,11 +45,12 @@
     },
     "./package.json": "./package.json",
     "./cordis.patch.yml": "./cordis.patch.yml",
-    "./icon": "./public/assets/icons/wj-dreamlight.png",
+    "./icon": "./public/assets/icons/wj-dreamlight.webp",
     "./assets/*": "./lib/assets/*",
     "./locale/*.json": "./locale/*.json"
   },
   "files": [
+    "LICENSE",
     "assets/*.webp",
     "assets/font-license.txt",
     "assets/LICENSE-2.0.txt",

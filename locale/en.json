@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "WJ Dreamlight",
-    "description": "Adds five Chinese festival wallpaper themes alongside VIP Golden Radiance, Halloween Night, and Christmas Snowglow, with reusable theme effects, to a Web profile.",
+    "description": "Provides holiday wallpapers, theme effects, transparency controls, and custom themes for DSH Web and desktop. Requires DSH >=0.2.1-rc.3 <0.3.0 or 0.2.2-alpha.2; custom remote wallpapers connect to their image host.",
     "detail": "docs/DETAIL.md"
   }
 }

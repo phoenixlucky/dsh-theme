@@ -1,5 +1,5 @@
 ---
-description: "面向 Web 配置档案的可选 VIP 梦幻主题与界面效果。"
+description: "为 DSH 网页版与桌面端提供节日壁纸、主题效果、透明度调节和自定义主题。需 DSH >=0.2.1-rc.3 <0.3.0 或 0.2.2-alpha.2；使用自定义远程壁纸时，客户端会连接壁纸所在的图片服务。"
 kind: "package-bundle"
 ---
 
@@ -9,7 +9,7 @@ kind: "package-bundle"
 
 ## 概述
 
-**WJ 星耀主题**是面向 Web 配置档案的可选插件，提供八款主题及对应的壁纸、配色和预览，并提供通用的主题接口：后续新增的主题（包括你自己定义的主题）都复用同一套效果层。VIP 金耀还包含金色界面强调、玻璃表面、授权显示字体和光影效果。插件及主题选择保存在配置档案中，DSH 升级后仍会保留。
+**WJ 星耀主题**适用于 DSH 网页版与桌面端，提供八款节日与 VIP 主题、对应壁纸、配色和预览，并支持透明度调节与自定义主题。通用主题接口让新增主题复用同一套效果层。VIP 金耀还包含金色界面强调、玻璃表面、授权显示字体和光影效果。插件及主题选择保存在配置档案中，DSH 升级后仍会保留。使用自定义远程壁纸时，客户端会连接壁纸所在的图片服务。
 
 ## 页面预览
 
@@ -40,14 +40,14 @@ kind: "package-bundle"
 
 ## 使用本包
 
-为 Web 配置档案选择一种安装方式：
+为 DSH 网页版或桌面端配置档案选择一种安装方式：
 
 - **官方安装：** 打开 **设置 → 插件 → 更多 → 官方**，找到 **WJ 星耀主题**，然后安装并启用。
-- **npm registry：** 运行 `dsh plugin --profile desktop add @tinyforge/dsh-theme@1.1.0`。
+- **npm registry：** 运行 `dsh plugin --profile desktop add @tinyforge/dsh-theme@1.1.1`。
 - **从 Git 仓库安装：** 运行 `dsh plugin --profile desktop add git+https://github.com/phoenixlucky/dsh-theme.git#main`。
 - **本地安装：** 运行 `dsh plugin --profile web add E:\home\dsh-theme`。
 
-当前包名为 `@tinyforge/dsh-theme`，主题插件自身版本为 `1.1.0`。本插件兼容 DSH `0.2.1-rc.3`、`0.2.2-alpha.2` 及后续稳定版 `0.2.x`；`dsh-client-ui-theme` 依赖会接受对应兼容版本。它的依赖版本不是本插件的安装版本。请通过 `dsh plugin` 安装，让 Harness 同时记录依赖和 profile 中的 bundle 选择。
+当前包名为 `@tinyforge/dsh-theme`，npm 上最新发布版本为 `1.1.1`。本插件兼容 DSH `0.2.1-rc.3`、`0.2.2-alpha.2` 及后续稳定版 `0.2.x`；`dsh-client-ui-theme` 依赖会接受对应兼容版本。它的依赖版本不是本插件的安装版本。请通过 `dsh plugin` 安装，让 Harness 同时记录依赖和 profile 中的 bundle 选择。
 
 启用后，在 **设置 → 主题与壁纸**（图库现在是设置里的独立页面，排在「通用」之后）中浏览八款主题，并分别调整侧边栏与对话区背景透明度（0–100%）。点卡片先查看大图预览，再点「应用主题」切换；主题和透明度设置保存在当前配置档案的 `dsh-theme` 插件配置中，重启后会自动恢复，并同步到加载此 Web 插件的端。透明度为 0 时保留原主题表面；调高后壁纸能否显示还取决于宿主画布是否透明。图库也会同步宿主主题设置中的浅色、深色和系统选项，并保存你在三者中的选择，重启后仍使用该配色，而不会退回跟随系统。启用插件时会保留当前主题偏好，包括「系统」；如需使用 VIP 金耀，请在图库中选择。停用插件会移除主题选择界面、八款主题和相关资源，内置的浅色、深色及系统配色仍可使用；旧设置中的 `official-vip-dream` 会迁移为 VIP 金耀。
 
@@ -79,7 +79,7 @@ createWallpaperTheme({
 
 ## 许可
 
-壁纸美术资源均包含在包内。GuruQiuWan 显示字体及 Apache-2.0 许可声明也随包提供，详见 `font-license.txt` 和 `LICENSE-2.0.txt`。
+插件源代码和文档采用 MIT 许可证，详见 `LICENSE`。GuruQiuWan 显示字体另行采用 Apache-2.0 许可证，其声明和完整文本见 `assets/font-license.txt` 与 `assets/LICENSE-2.0.txt`。
 
 ## 相关文档
 

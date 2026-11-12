@@ -1,3 +1,3 @@
 {
-  "meta": { "title": "WJ Dreamlight", "description": "VIP Golden Radiance、Halloween Night、Christmas Snowglowに加え、中国の祭日をテーマにした壁紙5種と再利用可能なテーマ効果をWebプロファイルに追加します。", "detail": "docs/DETAIL.md" }
+  "meta": { "title": "WJ Dreamlight", "description": "DSH Web版とデスクトップ版に、季節の壁紙、テーマ効果、透明度調整、カスタムテーマを追加します。DSH >=0.2.1-rc.3 <0.3.0 または 0.2.2-alpha.2 が必要です。カスタムのリモート壁紙を使うと、画像ホストに接続します。", "detail": "docs/DETAIL.md" }
 }

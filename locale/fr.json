@@ -1,3 +1,3 @@
 {
-  "meta": { "title": "WJ Dreamlight", "description": "Ajoute au profil Web cinq fonds de fêtes chinoises, ainsi que VIP Golden Radiance, Halloween Night et Christmas Snowglow, avec des effets de thème réutilisables.", "detail": "docs/DETAIL.md" }
+  "meta": { "title": "WJ Dreamlight", "description": "Propose des fonds festifs, des effets de thème, des réglages de transparence et des thèmes personnalisés pour DSH Web et ordinateur. Nécessite DSH >=0.2.1-rc.3 <0.3.0 ou 0.2.2-alpha.2 ; les fonds distants personnalisés se connectent à leur serveur d’images.", "detail": "docs/DETAIL.md" }
 }

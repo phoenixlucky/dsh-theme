@@ -3,23 +3,35 @@
 # After editing either side, bring the other along and re-record with:
 #   pnpm run verify-translation-pairing --write packages/bundle/dsh-theme/README.md
 /:
-  en: 172d9f4ed03ec88b
-  zh: a7dddd83775a359a
-/deepseek-ai-dsh-theme:
-  en: 357d410089dae110
-  zh: 2b165e7269fabd20
-/deepseek-ai-dsh-theme/summary:
-  en: 03ec186d05596776
-  zh: 2e9780fbb7accfad
-/deepseek-ai-dsh-theme/use-this-package:
-  en: 778b6f509de4b10b
-  zh: 4fc618b20ab82058
-/deepseek-ai-dsh-theme/supported-versions:
-  en: d6bb97d71c488510
-  zh: 2c758bc345ad85ff
-/deepseek-ai-dsh-theme/license:
-  en: 0a214fd0709d1586
-  zh: 245cf814b83b9623
-/deepseek-ai-dsh-theme/related-documentation:
-  en: 4bb9e09cbf61901b
-  zh: fa88343784928193
+  en: 6b071cf94ee68509
+  zh: e880f8ff8a9afddb
+/tinyforge-dsh-theme:
+  en: 698903e664d876d5
+  zh: 88b00b408b1c1de9
+/tinyforge-dsh-theme/summary:
+  en: d00248b05a447ca3
+  zh: fe1696079a89d172
+/tinyforge-dsh-theme/interface-previews:
+  en: 25cbf2198719ebe5
+  zh: fe40d7df953e804b
+/tinyforge-dsh-theme/interface-previews/wallpaper-gallery:
+  en: a9924cb02b27ff86
+  zh: 03f6330cf64f75d6
+/tinyforge-dsh-theme/theme-gallery:
+  en: 3f10861b69ce9739
+  zh: a21684fa9a3935bb
+/tinyforge-dsh-theme/use-this-package:
+  en: ceaafb0f178e7ad7
+  zh: 56c2b1a127c71e05
+/tinyforge-dsh-theme/add-your-own-theme:
+  en: e74943dc7ab32ae6
+  zh: 3601993cdf4e7044
+/tinyforge-dsh-theme/supported-versions:
+  en: 4848878fd9829acf
+  zh: c4f346ae22e478fe
+/tinyforge-dsh-theme/license:
+  en: 41785207e225d67b
+  zh: 379e0510c91c1ab9
+/tinyforge-dsh-theme/related-documentation:
+  en: aad90ddaea0d75d8
+  zh: 96ddb9888f964c80
