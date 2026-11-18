@@ -1,10 +1,3 @@
-@font-face {
-  font-family:DshVipDream;
-  src:url(__VIP_FONT_ASSET__)format("woff2");
-  font-style:normal;
-  font-weight:400;
-  font-display:swap
-}
 /* The wallpaper gallery is its own Settings page. */
 .dsh-theme-page {
   --dsh-theme-effect-motion-duration:180ms;
@@ -377,7 +370,6 @@ body[data-dsh-theme][data-ds-dark-theme]:not([data-dsh-theme=dsh-theme]) {
 }
 body[data-dsh-theme=dsh-theme] {
   color-scheme:light;
-  --dsh-font-family-text:DshVipDream;
   --dsh-appearance-hero-width:fit-content;
   --dsh-appearance-hero-title-size:42px;
   --dsh-appearance-hero-title-offset-y:-31px;
@@ -454,6 +446,11 @@ body[data-dsh-theme=dsh-theme] {
 }
 body[data-dsh-theme=dsh-theme][data-dsh-theme-glass] {
   --dsh-theme-hero-surface:transparent
+}
+/* The licensed display font is enabled by the client only when the Host serves
+   plugin font assets; servers that publish images alone keep the host stack. */
+body[data-dsh-theme=dsh-theme][data-dsh-theme-font] {
+  --dsh-font-family-text:DshVipDream,"Microsoft YaHei","PingFang SC","Noto Sans SC",system-ui,sans-serif
 }
 @keyframes dsh-vip-gold-glow {
   0%,

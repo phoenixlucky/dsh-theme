@@ -4,10 +4,8 @@ const stylesheetPath = new URL('../src/client/styles.css', import.meta.url);
 const bundlePath = new URL('../lib/client.js', import.meta.url);
 const stylesheet = (await readFile(stylesheetPath, 'utf8')).trim();
 
-for (const placeholder of ['__VIP_FONT_ASSET__', '__VIP_HERO_ASSET__']) {
-  if (!stylesheet.includes(placeholder)) {
-    throw new Error(`Missing stylesheet placeholder: ${placeholder}`);
-  }
+if (!stylesheet.includes('__VIP_HERO_ASSET__')) {
+  throw new Error('Missing stylesheet placeholder: __VIP_HERO_ASSET__');
 }
 
 const bundle = await readFile(bundlePath, 'utf8');
@@ -21,7 +19,6 @@ if (start < 0 || end < 0 || bundle.indexOf(marker, start + marker.length) >= 0) 
 
 const embeddedStylesheet = [
   `\t\tvar styles_css_default = ${JSON.stringify(stylesheet)}`,
-  '\t\t\t.replaceAll("__VIP_FONT_ASSET__", require.asset("plugins/@tinyforge/dsh-theme/assets/guru-qiu-wan-760bf36ff908.woff2"))',
   '\t\t\t.replaceAll("__VIP_HERO_ASSET__", require.asset("plugins/@tinyforge/dsh-theme/assets/hero-orbit-4e09640dbc7b.webp"));'
 ].join('\n');
 
