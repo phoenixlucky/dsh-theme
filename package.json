@@ -1,7 +1,7 @@
 {
   "name": "@tinyforge/dsh-theme",
   "description": "Festival wallpapers, one local wallpaper upload saved inline as WebP, frosted glass, transparency controls, and custom palettes for DSH Web and desktop; requires DSH >=0.2.1-rc.3 <0.3.0 or 0.2.2-alpha.2. Custom remote wallpapers connect to their image host.",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": {
     "name": "phoenixlucky",
     "url": "https://github.com/phoenixlucky"
