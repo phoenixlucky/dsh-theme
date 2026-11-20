@@ -17,10 +17,10 @@ These rules apply to all future interface work in this plugin repository.
 
 ### Seasonal character themes
 
-- Use the character in the VIP Golden Radiance wallpaper as the identity reference for seasonal variants. Keep her face, long indigo hair, body proportions, anime rendering style, and right-side placement consistent; adapt only the outfit, props, lighting, and setting to the holiday.
+- Use the character in the 金耀财神 (Golden God of Wealth) wallpaper as the identity reference for seasonal variants. Keep her face, long indigo hair, body proportions, anime rendering style, and right-side placement consistent; adapt only the outfit, props, lighting, and setting to the holiday.
 - Preserve the character's signature whale motifs in every seasonal variant: whale-fin ears, a recognizable whale-tail accessory, and the small blue whale plush.
 - Keep the existing wide wallpaper composition, with the character on the right and quieter space on the left for interface content. Match the current wallpaper dimensions and optimize the final artwork as WebP.
-- Store semantic WebP source assets under `public/assets/images/`, include the runtime asset in the package's bundled assets, and reference it through the host asset loader. Keep the corresponding source and package asset copies in sync.
+- Store semantic WebP source assets under `public/assets/images/`, include the runtime asset in the package's bundled assets, and reference it through the host asset loader. Keep the corresponding source and package asset copies in sync. **Exception for the eight built-in wallpapers (since 2026-11-20):** they ship inline in `lib/client.js` as `data:image/webp;base64,…` constants, so no wallpaper request reaches the Host asset route. Keep the source WebP at `assets/<theme>.wallpaper.webp` for README previews and the mirrored `public/assets/images/<theme>-wallpaper.webp`; do not add per-wallpaper copies under `lib/assets/`, and re-encode from the source rather than editing the Base64 by hand. Keep a wallpaper near 1672×941 and inside roughly 150–300 KB before encoding, because the Base64 grows the client bundle by 4/3 of the file size.
 - When adding a seasonal theme, update the saved-preference schema, theme registration, gallery labels for every supported locale, theme-scoped wallpaper selectors, package metadata, previews, and English/Chinese documentation. Run `pnpm pack --dry-run` and confirm the wallpaper assets appear in the package listing.
 
 ## Implementation

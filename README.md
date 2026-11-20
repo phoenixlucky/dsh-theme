@@ -9,11 +9,11 @@ English | [中文](README.zh.md)
 
 ## Summary
 
-WJ Dreamlight adds eight selectable holiday and VIP themes, matching wallpapers, palettes, and previews to DSH Web and desktop clients. It also provides transparency controls and a reusable theme interface for custom themes. VIP Golden Radiance adds gold accents, glass surfaces, a licensed display font, and light effects. The bundle and selected theme stay with the profile when DSH is upgraded. Using a custom remote wallpaper connects the client to the image host.
+WJ Dreamlight adds eight selectable festival themes, matching wallpapers, palettes, and previews to DSH Web and desktop clients. It also provides transparency controls and a reusable theme interface for custom themes. Golden God of Wealth adds gold accents, glass surfaces, a licensed display font, and light effects. The bundle and selected theme stay with the profile when DSH is upgraded. Using a custom remote wallpaper connects the client to the image host.
 
 ## Interface previews
 
-<p align="center"><img src="assets/dsh-theme-preview.webp" alt="DSH Web interface showing the VIP Golden Radiance wallpaper"></p>
+<p align="center"><img src="assets/dsh-theme-preview.webp" alt="DSH Web interface showing the Golden God of Wealth wallpaper"></p>
 
 ### Wallpaper gallery
 
@@ -23,7 +23,7 @@ WJ Dreamlight adds eight selectable holiday and VIP themes, matching wallpapers,
 
 <table>
   <tr>
-    <td align="center"><img src="assets/vip-dream.wallpaper.webp" alt="VIP Golden Radiance wallpaper" width="240"><br><strong>VIP Golden Radiance</strong></td>
+    <td align="center"><img src="assets/vip-dream.wallpaper.webp" alt="Golden God of Wealth wallpaper" width="240"><br><strong>Golden God of Wealth</strong></td>
     <td align="center"><img src="assets/dragon-boat-festival.wallpaper.webp" alt="Dragon Boat Festival wallpaper" width="240"><br><strong>Dragon Boat Festival</strong></td>
     <td align="center"><img src="assets/qingming-festival.wallpaper.webp" alt="Qingming Festival wallpaper" width="240"><br><strong>Qingming Festival</strong></td>
   </tr>
@@ -49,9 +49,9 @@ Choose one installation method for your DSH Web or desktop profile:
 
 The current package id is `@tinyforge/dsh-theme` and the latest version published to npm is `1.2.2`. The bundle supports DSH `0.2.1-rc.3`, `0.2.2-alpha.2`, and later stable `0.2.x` releases. Its `@deepseek-ai/dsh-client-ui-theme` peer dependency accepts the matching compatible releases; that version is not this bundle's install version. Install through `dsh plugin` so Harness records the bundle in the profile.
 
-Open **Settings → Themes & wallpaper** — the gallery has a Settings page of its own, next to General — to browse the eight themes and use the **Background & effects** sliders: separate 0–100% background transparency for the sidebar and conversation area, plus a **frosted-glass** strength that applies to every wallpaper theme, built-ins included. Select a card to preview its wallpaper, then choose **Apply theme** to switch; the theme and transparency values are saved in the `dsh-theme` plugin configuration for the current profile and restored after restart on clients that load this Web plugin. Because the built-in palette setting stores only light, dark, and system, a wallpaper theme id stays an in-process choice: whenever the Host re-adopts its palette from a settings update, the plugin re-applies the saved theme, while choosing light, dark, or system in Appearance replaces the wallpaper. At 0%, the original theme surfaces are preserved. Wallpaper visibility at higher values still depends on whether the host canvas is transparent. The gallery also follows the host theme settings for light, dark, and system, and saves whichever of the three you pick, so a restart keeps that palette instead of falling back to the system setting. Enabling the bundle preserves the current theme preference, including `system`; choose VIP Golden Radiance from the gallery to apply it. Disabling the bundle removes the gallery, its eight themes, and their assets, while the built-in light, dark, and system palettes remain available. Existing `official-vip-dream` preferences migrate to VIP Golden Radiance.
+Open **Settings → Themes & wallpaper** — the gallery has a Settings page of its own, next to General — to browse the eight themes and use the **Background & effects** sliders: separate 0–100% background transparency for the sidebar and conversation area, plus a **frosted-glass** strength that applies to every wallpaper theme, built-ins included. Select a card to preview its wallpaper, then choose **Apply theme** to switch; the theme and transparency values are saved in the `dsh-theme` plugin configuration for the current profile and restored after restart on clients that load this Web plugin. Because the built-in palette setting stores only light, dark, and system, a wallpaper theme id stays an in-process choice: whenever the Host re-adopts its palette from a settings update, the plugin re-applies the saved theme, while choosing light, dark, or system in Appearance replaces the wallpaper. At 0%, the original theme surfaces are preserved. Wallpaper visibility at higher values still depends on whether the host canvas is transparent. The gallery also follows the host theme settings for light, dark, and system, and saves whichever of the three you pick, so a restart keeps that palette instead of falling back to the system setting. Enabling the bundle preserves the current theme preference, including `system`; choose Golden God of Wealth from the gallery to apply it. Disabling the bundle removes the gallery, its eight themes, and their assets, while the built-in light, dark, and system palettes remain available. Existing `official-vip-dream` preferences migrate to Golden God of Wealth.
 
-The browser plugin registers the eight themes through `ctx.theme` and adds its own `settings.section` page — wallpaper grid, surface-transparency sliders, and the custom-theme editor — instead of a row inside General. The page uses Harness configuration forms to save and restore the theme, the two transparency values, and the glass strength in the profile; the glass is one plugin-owned wallpaper layer, so it needs no per-theme state. VIP styling is applied through a disposable stylesheet effect. Wallpaper images and the licensed display font ship with the bundle, so they need no network request or files from the application installation directory. Wallpapers use the Host plugin asset route; the font cannot, because that route publishes images only, so the bundle registers its own `/theme-font` route and the client probes it before enabling the display face. A composition that serves neither keeps the host text stack.
+The browser plugin registers the eight themes through `ctx.theme` and adds its own `settings.section` page — wallpaper grid, surface-transparency sliders, and the custom-theme editor — instead of a row inside General. The page uses Harness configuration forms to save and restore the theme, the two transparency values, and the glass strength in the profile; the glass is one plugin-owned wallpaper layer, so it needs no per-theme state. The theme's extra styling is applied through a disposable stylesheet effect. Wallpaper images and the licensed display font ship with the bundle, so they need no network request or files from the application installation directory. The eight built-in wallpapers are inlined in the client bundle as WebP data URLs, so no wallpaper request reaches the Host plugin asset route; the font cannot use that route because it publishes images only, so the bundle registers its own `/theme-font` route and the client probes it before enabling the display face. A composition that serves neither keeps the host text stack.
 
 ## Add your own theme
 
@@ -85,4 +85,4 @@ The plugin source code and documentation are licensed under MIT; see `LICENSE`. 
 ## Related documentation
 
 - [Theme extension API](../../client/ui-theme/README.md#registering-a-theme)
-- [VIP Golden Radiance detail](docs/DETAIL.md)
+- [Golden God of Wealth detail](docs/DETAIL.md)

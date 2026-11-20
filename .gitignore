@@ -2,3 +2,5 @@ node_modules/
 *.tgz
 # Local agent notes (added 2026-11-20): working memory stays local, never published.
 MEMORY.md
+# Local scratch preview (added 2026-11-20): not part of the bundle.
+test-wallpaper.html
