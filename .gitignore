@@ -1,2 +1,4 @@
 node_modules/
 *.tgz
+# Local agent notes (added 2026-11-20): working memory stays local, never published.
+MEMORY.md

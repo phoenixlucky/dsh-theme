@@ -35,6 +35,21 @@ These rules apply to all future interface work in this plugin repository.
 - Reuse the tokens across related states and components so hover, focus, selected, and modal feedback remain consistent. Keep decorative emphasis distinct from interaction feedback.
 - Preserve clear `:focus-visible` feedback and disable or reduce decorative motion and transitions under `prefers-reduced-motion`.
 
+## Custom theme images (applies to this repository, since 2026-11-20)
+
+- Keep exactly one custom wallpaper per profile: the gallery has a single **Local upload** slot, one `customThemes` entry, and a slot id that survives artwork replacement. Built-in wallpaper themes store nothing but their selected id. Do not reintroduce a multi-theme custom collection.
+- Treat the saved upload as durable across theme switches: selecting a built-in theme writes only `preference` and must never clear `customThemes`. Clearing is reserved for an explicit **Delete** or **Remove image**, so users can switch to a built-in palette and come back without losing the artwork.
+- When several `customThemes` entries exist from an older build, register the one the saved preference names, otherwise the first; ignore the rest on read and collapse the array on the next save. Never let extras break the section or reset an applied theme on its own.
+- Keep local uploads browser-side: decode with the browser's image pipeline, re-encode to WebP on a canvas, and store the `data:image/webp;base64,…` value in the theme's `wallpaper` field. Do not add a host file API, an upload endpoint, or a copied file on disk for this.
+- Keep the three size limits synchronized: the encoder's target data URL, the encoder's hard ceiling, and the Host Config schema maximum for `wallpaper`. A value the Host schema rejects makes the whole `dsh-theme` section unreadable, so the encoder ceiling stays below the schema maximum and over-limit saved entries are dropped on read.
+- Treat a browser without a WebP encoder as an error, not a silent format change: `canvas.toBlob('image/webp')` returns PNG there, so check `blob.type`.
+- Never render a stored base64 wallpaper inside a text input; show a thumbnail with dimensions and size, and keep a clear action back to URL entry.
+- Implement visual effects the plugin owns, not by rewriting Host DOM: the frosted-glass strength drives one plugin-owned fixed wallpaper layer (`.dsh-theme-glass-layer`) through a unitless `--dsh-theme-glass` custom property and a `data-dsh-theme-glass-mode` gate, so every wallpaper theme inherits it without per-theme state. Create that layer inside `ctx.effect` and remove it on dispose.
+- Keep the glass layer free of opacity transitions: a throttled background tab freezes them and would show no frost at all. Animate only where a stalled transition cannot hide the effect.
+- Add every new gallery string to all eight locale dictionaries in `lib/client.js`; run the locale parity check and `node --check lib/client.js` after scripted edits.
+- Verify a change to this path in an isolated profile: create one from the shipped web template, install the local package with `dsh plugin --profile <name> add <path>`, boot it on a spare port, drive the gallery in a browser, confirm the saved value in `profiles/<name>/cordis.patch.yml`, then delete the throwaway profile.
+
+
 ## DeepSeek Harness plugin packaging and installation
 
 Apply these rules to every plugin bundle in this repository and use them as the baseline when adding another Harness plugin.
