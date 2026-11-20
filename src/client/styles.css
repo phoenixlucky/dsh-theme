@@ -430,6 +430,29 @@ body[data-dsh-theme-glass-mode] .dsh-theme-glass-layer {
   opacity:1;
   filter:blur(calc(var(--dsh-theme-glass, 0) * 0.26px)) saturate(calc(100% + var(--dsh-theme-glass, 0) * 0.6%))
 }
+/*
+ * Windows desktop: stop the conversation area riding on the sidebar's paint.
+ *
+ * `[data-windows-titlebar]` makes AppFrame paint its own background — the ground
+ * behind every column — with `--dsw-specific-sidebar-fill`, and gives the centre
+ * column `--dsw-alias-bg-base` on top. So the sidebar slider was the base under
+ * the whole conversation area: it moved the conversation's real transparency,
+ * and at 0 it capped that area at opaque whatever its own slider said.
+ *
+ * Clear just that frame. `[data-shell-bottom]` is the frame's own bottom row, so
+ * `:has(> …)` names the frame without a generated class name; without `:has()`
+ * the rule is dropped and the window simply keeps today's paint. The sidebar
+ * column, its rows and the caption strip keep their fill, and the conversation
+ * column is left on the wallpaper alone. The caption strip is repainted here
+ * twice so it matches the column, which the Host also paints twice.
+ */
+html[data-windows-titlebar] div:has(> [data-shell-bottom]) {
+  background:transparent !important
+}
+html[data-windows-titlebar] div:has(> [data-shell-bottom])::before {
+  background:transparent;
+  background-image:linear-gradient(var(--dsw-specific-sidebar-fill),var(--dsw-specific-sidebar-fill)),linear-gradient(var(--dsw-specific-sidebar-fill),var(--dsw-specific-sidebar-fill))
+}
 /* Our own surfaces read as glass too when the effect is on. */
 body[data-dsh-theme-glass-mode] .dsh-theme-gallery-card,
 body[data-dsh-theme-glass-mode] .dsh-theme-gallery-dialog {
