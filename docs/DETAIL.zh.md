@@ -49,7 +49,7 @@ createWallpaperTheme({
 
 效果输入只有 `--dsh-theme-accent` 与 `--dsh-theme-surface`，其余派生值都以 `--dsh-theme-*` 命名空间暴露，主题可按需覆盖；动效、悬停、玻璃、边框、氛围层各自独立成 token，并遵循 `prefers-reduced-motion`。
 
-样式源码位于 `src/client/styles.css`，修改后运行 `pnpm run sync:client-styles` 更新客户端 bundle。发布包保留运行时字体和许可文件，不再重复包含原始字体副本。客户端会在运行时探测字体资源，仅在宿主提供插件字体资源时启用显示字体；只发布图片资源的宿主（包括 DSH `0.2.2-rc.3`）会保留宿主文本字体。
+样式源码位于 `src/client/styles.css`，修改后运行 `pnpm run sync:client-styles` 更新客户端 bundle。发布包保留运行时字体和许可文件，不再重复包含原始字体副本。宿主插件资源路由只发图片（`.svg`、`.png`、`.webp`、`.jpg`、`.jpeg`），所以插件的宿主侧自己注册 `/theme-font` 路由，以不可变缓存流式发出 `.woff2`；客户端探测到该路由后才启用显示字体。宿主侧未挂载该路由时保留宿主文本字体。
 
 ## 启用与停用
 

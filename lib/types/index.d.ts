@@ -29,5 +29,7 @@ export interface Config {
     customThemes: Volatile<CustomTheme[]>;
 }
 export declare const Config: z<Config>;
-/** Provides no host-side behavior. */
-export declare function apply(): void;
+/** Serve the bundled display font from this plugin's own `/theme-font` route. */
+export declare function apply(ctx: {
+    inject(services: string[], callback: (ctx: any) => void): unknown;
+}): void;

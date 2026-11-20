@@ -613,8 +613,9 @@ body[data-dsh-theme=dsh-theme] {
 body[data-dsh-theme=dsh-theme][data-dsh-theme-glass] {
   --dsh-theme-hero-surface:transparent
 }
-/* The licensed display font is enabled by the client only when the Host serves
-   plugin font assets; servers that publish images alone keep the host stack. */
+/* The licensed display font is served by this plugin's own /theme-font route
+   (the Host asset route publishes images only). The client probes that route
+   first and keeps the host stack when it is absent. */
 body[data-dsh-theme=dsh-theme][data-dsh-theme-font] {
   --dsh-font-family-text:DshVipDream,"Microsoft YaHei","PingFang SC","Noto Sans SC",system-ui,sans-serif
 }
