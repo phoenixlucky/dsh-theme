@@ -1,3 +1,3 @@
 {
-  "meta": { "title": "WJ Dreamlight", "description": "Ofrece fondos festivos, efectos de tema, controles de transparencia y temas personalizados para DSH Web y escritorio. Requiere DSH >=0.2.1-rc.3 <0.3.0 o 0.2.2-alpha.2; los fondos remotos personalizados conectan con su servidor de imágenes.", "detail": "docs/DETAIL.md" }
+  "meta": { "title": "WJ Dreamlight", "description": "Fondos festivos, una imagen local guardada incrustada como WebP, vidrio esmerilado, controles de transparencia y temas personalizados para DSH Web y escritorio. Requiere DSH >=0.2.1-rc.3 <0.3.0 o 0.2.2-alpha.2.", "detail": "docs/DETAIL.md" }
 }
