@@ -5,6 +5,12 @@ kind: "package-bundle"
 
 # @tinyforge/dsh-theme
 
+![license](https://img.shields.io/badge/license-MIT-blue)
+![npm](https://img.shields.io/npm/v/@tinyforge/dsh-theme?label=npm)
+![downloads](https://img.shields.io/npm/dm/@tinyforge/dsh-theme?label=downloads)
+![DSH Web Plugin](https://img.shields.io/badge/DSH_Web_Plugin-yes-brightgreen)
+![DSH tested up to](https://img.shields.io/badge/DSH_tested_up_to-0.2.2--rc.5-blue)
+
 English | [中文](README.zh.md)
 
 ## Summary
@@ -43,13 +49,13 @@ WJ Dreamlight adds eight selectable festival themes, matching wallpapers, palett
 Choose one installation method for your DSH Web or desktop profile:
 
 - **Official:** Open **Settings → Plugins → More → Official**, find **WJ Dreamlight**, then install and enable it.
-- **npm registry:** Run `dsh plugin --profile desktop add @tinyforge/dsh-theme@1.2.5`.
+- **npm registry:** Run `dsh plugin --profile desktop add @tinyforge/dsh-theme@1.2.6`.
 - **From this Git repository:** Run `dsh plugin --profile desktop add git+https://github.com/phoenixlucky/dsh-theme.git#main`.
 - **Local copy:** From a checkout, run `node scripts/install-plugin.mjs --profile desktop --local <path-to-this-checkout>`.
 
 On Windows, `dsh plugin remove` rewrites the profile's dependency files but can leave the `link:` junction in `node_modules`, and the next registry install of the same name then fails with `EPERM`: pnpm follows that junction into the checkout and needs a cross-drive symbolic link the account may not be allowed to create. `scripts/install-plugin.mjs` clears such a leftover link first — only the reparse point, never the checkout — and then installs through `dsh plugin add`, taking `--version` or `--local`; `--dry-run` reports what it would do.
 
-The current package id is `@tinyforge/dsh-theme` and the latest version published to npm is `1.2.5`. The bundle supports DSH `0.2.1-rc.3`, `0.2.2-alpha.2`, and later stable `0.2.x` releases. Its `@deepseek-ai/dsh-client-ui-theme` peer dependency accepts the matching compatible releases; that version is not this bundle's install version. Install through `dsh plugin` so Harness records the bundle in the profile.
+The current package id is `@tinyforge/dsh-theme` and the latest version published to npm is `1.2.6`. The bundle supports DSH `0.2.1-rc.3`, `0.2.2-alpha.2`, and later stable `0.2.x` releases. Its `@deepseek-ai/dsh-client-ui-theme` peer dependency accepts the matching compatible releases; that version is not this bundle's install version. Install through `dsh plugin` so Harness records the bundle in the profile.
 
 Open **Settings → Themes & wallpaper** — the gallery has a Settings page of its own, next to General — to browse the eight themes and use the **Background & effects** sliders: separate 0–100% background transparency for the sidebar and conversation area, plus a **frosted-glass** strength that applies to every wallpaper theme, built-ins included. Select a card to preview its wallpaper, then choose **Apply theme** to switch; the theme and transparency values are saved in the `dsh-theme` plugin configuration for the current profile and restored after restart on clients that load this Web plugin. Because the built-in palette setting stores only light, dark, and system, a wallpaper theme id stays an in-process choice: whenever the Host re-adopts its palette from a settings update, the plugin re-applies the saved theme, while choosing light, dark, or system in Appearance replaces the wallpaper. At 0%, the original theme surfaces are preserved; above that each slider is the share of wallpaper that shows through its own area, and the two stay independent. The Windows desktop window frame used to be painted with the sidebar fill under the conversation column, which made the sidebar slider move the conversation area; the plugin now clears just that frame and corrects for the Host painting each fill twice, so a 13% slider really is 13% wallpaper. The gallery also follows the host theme settings for light, dark, and system, and saves whichever of the three you pick, so a restart keeps that palette instead of falling back to the system setting. Enabling the bundle preserves the current theme preference, including `system`; choose Golden God of Wealth from the gallery to apply it. Disabling the bundle removes the gallery, its eight themes, and their assets, while the built-in light, dark, and system palettes remain available. Existing `official-vip-dream` preferences migrate to Golden God of Wealth.
 

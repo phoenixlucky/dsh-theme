@@ -87,6 +87,12 @@ Apply these rules to every plugin bundle in this repository and use them as the 
 - Verify any change to install, update or unload behaviour on a throwaway profile with a packed tarball, not a `link:` directory: a linked dependency is never hoisted, so the duplicate-copy failure does not reproduce. Assert that the Host module's `rev` in the served boot manifest is identical before and after each of add, remove and update, and that `document.getElementById('root').children.length` stays non-zero with no `SlotAssemblyError` in the console.
 - On Windows, never round-trip a UTF-8 source file through PowerShell `Get-Content -Raw` / `Set-Content`: the ANSI code page mangles non-ASCII text and breaks the syntax. Use a UTF-8-aware editor, or `[System.IO.File]::ReadAllText` with `WriteAllText(..., UTF8Encoding($false))`.
 
+### README badges (applies to every bundle here, since 2026-11-21)
+
+- Put one row of five shields badges directly under the `# <package>` title, above the language-switch line, in both `README.md` and `README.zh.md`. Keep the row identical in both files and label it in English; the Chinese explanation stays in the body.
+- Fixed order and sources: license from `package.json` `license` (`-` → `--`, space → `_`), npm version and downloads from the package name, `DSH Web Plugin` static, and `DSH tested up to` = the highest Harness version actually verified, never the `engines.dsh` upper bound.
+- Badges add no package entries (`npm publish` takes `README.md` on its own). Re-record `README.i18n.yaml` with the host monorepo's `pnpm run verify-translation-pairing --write <README.md>` when that pair is verified there; this repository cannot run it.
+
 ### Serving non-image package assets (since 2026-11-20)
 
 - Treat `/plugins/<package>/assets/<file>` as an image route only. The Host resolves that path through the package `exports` correctly, but answers 404 for any extension outside its media-type table (`.svg`, `.png`, `.webp`, `.jpg`, `.jpeg`), so a `.woff2` there never loads no matter how `exports` or `files` are declared. Do not chase that 404 as a packaging bug.
