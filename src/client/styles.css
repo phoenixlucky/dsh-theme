@@ -659,6 +659,14 @@ body[data-dsh-theme=dsh-theme][data-dsh-theme-font] {
     background-position: 100% 50%;
   }
 }
+/* This bundle's own plugin-detail panel: the Host's Markdown images are display:block, so a
+   badge row stacks vertically. Keep them inline; the eager-load effect next to the stylesheet
+   registration is what makes the request start at all. Host data attribute only. */
+[data-plugin-detail="@tinyforge/dsh-theme"] img {
+  display: inline;
+  vertical-align: middle;
+  margin: 0 4px 0 0;
+}
 @media (prefers-reduced-motion: reduce) {
   body[data-dsh-theme] {
     --dsh-theme-effect-motion-duration:0ms

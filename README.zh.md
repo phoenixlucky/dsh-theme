@@ -49,13 +49,13 @@ kind: "package-bundle"
 为 DSH 网页版或桌面端配置档案选择一种安装方式：
 
 - **官方安装：** 打开 **设置 → 插件 → 更多 → 官方**，找到 **WJ 星耀主题**，然后安装并启用。
-- **npm registry：** 运行 `dsh plugin --profile desktop add @tinyforge/dsh-theme@1.2.6`。
+- **npm registry：** 运行 `dsh plugin --profile desktop add @tinyforge/dsh-theme@1.2.7`。
 - **从 Git 仓库安装：** 运行 `dsh plugin --profile desktop add git+https://github.com/phoenixlucky/dsh-theme.git#main`。
 - **本地安装：** 在仓库里运行 `node scripts/install-plugin.mjs --profile desktop --local <本仓库路径>`。
 
 Windows 上 `dsh plugin remove` 会改掉依赖记录，却可能把 `link:` 的 junction 留在 profile 的 `node_modules` 里；之后再装同名包的 registry 版本就会报 `EPERM`——pnpm 顺着那个 junction 摸进仓库，要去建一条跨盘符号链接，而当前账户未必有这个权限。`scripts/install-plugin.mjs` 会先摘掉这类残留链接（只删重解析点，不动你的仓库），再交给 `dsh plugin add` 安装；可传 `--version` 或 `--local`，`--dry-run` 只报告不执行。
 
-当前包名为 `@tinyforge/dsh-theme`，npm 上最新发布版本为 `1.2.6`。本插件兼容 DSH `0.2.1-rc.3`、`0.2.2-alpha.2` 及后续稳定版 `0.2.x`；`@deepseek-ai/dsh-client-ui-theme` 作为 peer 依赖接受对应兼容版本。它的版本不是本插件的安装版本。请通过 `dsh plugin` 安装，让 Harness 同时记录依赖和 profile 中的 bundle 选择。
+当前包名为 `@tinyforge/dsh-theme`，npm 上最新发布版本为 `1.2.7`。本插件兼容 DSH `0.2.1-rc.3`、`0.2.2-alpha.2` 及后续稳定版 `0.2.x`；`@deepseek-ai/dsh-client-ui-theme` 作为 peer 依赖接受对应兼容版本。它的版本不是本插件的安装版本。请通过 `dsh plugin` 安装，让 Harness 同时记录依赖和 profile 中的 bundle 选择。
 
 启用后，在 **设置 → 主题与壁纸**（图库现在是设置里的独立页面，排在「通用」之后）中浏览八款主题，并用「背景与效果」里的三个滑杆分别调整侧边栏透明度、对话区透明度和**毛玻璃强度**（0–100%，对所有壁纸主题生效，含内置主题）。点卡片先查看大图预览，再点「应用主题」切换；主题和这些设置保存在当前配置档案的 `dsh-theme` 插件配置中，重启后会自动恢复，并同步到加载此 Web 插件的端。内置配色设置只保存浅色、深色和系统三种值，因此壁纸主题 id 属于进程内选择：设置更新导致宿主重新采用内置配色时，插件会立即恢复已保存的主题；在外观中选择浅色、深色或系统则会替换壁纸。透明度为 0 时保留原主题表面；调高后，每个滑杆就是该区域透出的壁纸比例，两者互不影响。此前 Windows 桌面端的窗口底色会把侧边栏填充垫在对话区下面，调侧边栏会带动对话区；现在插件只摘掉那层窗口底，并补偿宿主把每个填充画两遍的叠加，13% 就真的是 13% 壁纸。图库也会同步宿主主题设置中的浅色、深色和系统选项，并保存你在三者中的选择，重启后仍使用该配色，而不会退回跟随系统。启用插件时会保留当前主题偏好，包括「系统」；如需使用金耀财神，请在图库中选择。停用插件会移除主题选择界面、八款主题和相关资源，内置的浅色、深色及系统配色仍可使用；旧设置中的 `official-vip-dream` 会迁移为金耀财神。
 
